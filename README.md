@@ -1,6 +1,6 @@
 
 # Virtual Menu - CS50
-#### Video Demo: [YouTube Demo](https://youtu.be/XDQRKiQTss8)
+#### Video Demo: https://youtu.be/XDQRKiQTss8
 #### Description:
 
 ## Overview
@@ -60,7 +60,7 @@ Virtual Menu is a system designed to streamline restaurant operations by simplif
 
 4. **Start the Flask server**:
    ```bash
-   flask run --host=localhost --port=5001
+   flask run --host=127.0.0.1 --port=5001
    ```
 
 ---
@@ -81,7 +81,14 @@ Virtual Menu is a system designed to streamline restaurant operations by simplif
      npm -v
      ```
 
-4. **Install React dependencies and start the server**:
+4. **Configure React to run on 127.0.0.1**:
+   - Create a `.env` file in the `frontend` directory.
+   - Add the following line to the `.env` file:
+     ```env
+     HOST=127.0.0.1
+     ```
+
+5. **Install React dependencies and start the server**:
    ```bash
    npm install
    npm start
@@ -103,3 +110,4 @@ Virtual Menu is a system designed to streamline restaurant operations by simplif
 
 ## Notes
 - Ensure both the backend (Flask) and frontend (React) servers are running simultaneously for the application to work correctly.
+- By configuring the `.env` file, React will always run on `127.0.0.1`.
